@@ -1,14 +1,23 @@
-class AvatarInnovador : public Avatar {
-private:
-    int paso = 0;
-public:
-    void mover(char = ' ') override {
-        switch (paso % 4) {
-            case 0: Personaje::mover('D'); break;  // Derecha
-            case 1: Personaje::mover('S'); break;  // Abajo
-            case 2: Personaje::mover('A'); break;  // Izquierda
-            case 3: Personaje::mover('S'); break;  // Abajo
-        }
-        paso++;
+#include "AvatarInnovador.h"
+#include <iostream>
+
+AvatarInnovador::AvatarInnovador() : paso(0) {}
+
+// Movimiento en patrón tipo Z.
+void AvatarInnovador::mover(char) {
+    switch (paso % 4) {
+        case 0:
+            Avatar::mover('D');
+            break;
+        case 1:
+            Avatar::mover('S');
+            break;
+        case 2:
+            Avatar::mover('A');
+            break;
+        case 3:
+            Avatar::mover('S');
+            break;
     }
-};
+    paso++;  // Avanza al siguiente paso del patrón
+}
