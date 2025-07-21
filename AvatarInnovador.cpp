@@ -7,13 +7,13 @@ AvatarInnovador::AvatarInnovador() : paso(0) {}
 void AvatarInnovador::mover(char) {
     switch (paso % 4) {
         case 0:
-            Avatar::mover('D'); break;
+            Avatar::mover('D'); break;  //Derecha
         case 1:
-            Avatar::mover('S'); break;
+            Avatar::mover('S'); break;  //Abajo
         case 2:
-            Avatar::mover('A'); break;
+            Avatar::mover('A'); break;  //Izquierda
         case 3:
-            Avatar::mover('S'); break;
+            Avatar::mover('S'); break;  //Abajo
     }
     paso++;  // Avanza al siguiente paso del patrón
 }
