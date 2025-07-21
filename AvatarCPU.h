@@ -7,6 +7,7 @@ class AvatarCPU : public Avatar {
 public:
     AvatarCPU();
 
+    // Sobrescribe mover para que el avatar se mueva aleatoriamente
     void mover(char direccion = ' ') override;
 };
 
